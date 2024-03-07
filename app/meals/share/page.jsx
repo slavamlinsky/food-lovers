@@ -1,6 +1,7 @@
 import { shareMeal } from "@/lib/actions";
 import ImagePicker from "../image-picker";
 import styles from "./page.module.css";
+import MealsFormSubmit from "../meals-form-submit";
 
 export default function SharePage() {
   return (
@@ -37,7 +38,8 @@ export default function SharePage() {
           </p>
           <ImagePicker label="Your image" name="image" />
           <p className={styles.actions}>
-            <button type="submit">Share Meal</button>
+            {/* <button type="submit">{isPending ? "Share Meal" : "Submitting..."}</button> */}
+            <MealsFormSubmit />
           </p>
         </form>
       </main>
