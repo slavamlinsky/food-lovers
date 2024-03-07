@@ -1,29 +1,9 @@
-import { getMeal } from "@/lib/meals";
 import Link from "next/link";
-import Image from "next/image";
-import styles from "./page.module.css";
 
-async function BlogPage() {
-  const meal = await getMeal("chicken-nuggets");
-
+function BlogPage() {
   return (
     <main>
-      <h1>The Blog New</h1>
-      <header className={styles.header}>
-        <div className={styles.image}>
-          <Image src={meal.image} alt={meal.title} fill sizes="20em" />
-        </div>
-        <div className={styles.headerText}>
-          <h1>{meal.title}</h1>
-          <p className={styles.creator}>
-            by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
-          </p>
-          <p className={styles.summary}>{meal.summary}</p>
-        </div>
-      </header>
-      <main>
-        <p className={styles.instructions} dangerouslySetInnerHTML={{ __html: meal.instructions }}></p>
-      </main>
+      <h1>The Blog</h1>
       <p>
         <Link href="/blog/post-1">Post 1</Link>
       </p>

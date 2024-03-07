@@ -6,7 +6,7 @@ import { getMeal } from "@/lib/meals";
 async function MealDetailsPage({ params }) {
   const { mealSlug } = params;
 
-  const meal = await getMeal("chicken-nuggets");
+  const meal = await getMeal(mealSlug);
 
   if (!meal) {
     return notFound();
@@ -15,7 +15,6 @@ async function MealDetailsPage({ params }) {
 
   return (
     <>
-      <h3>{params.mealSlug}</h3>
       <header className={styles.header}>
         <div className={styles.image}>
           <Image src={meal.image} alt={meal.title} fill sizes="20em" />
