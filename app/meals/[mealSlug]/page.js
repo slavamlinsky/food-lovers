@@ -3,7 +3,7 @@
 // import Image from "next/image";
 // import { notFound } from "next/navigation";
 
-import { getMeal } from "@/lib/meals";
+// import { getMeal } from "@/lib/meals";
 
 // function MealDetailsPage({ params }) {
 //   const meal = getMeal(params.slug);
@@ -36,15 +36,26 @@ import { getMeal } from "@/lib/meals";
 
 // export default MealDetailsPage;
 
-function MealDetailsPage({ params }) {
-  // const meal = getMeal(params.mealSlug);
+// function MealDetailsPage({ params }) {
+//   // const meal = getMeal(params.mealSlug);
+//   return (
+//     <main>
+//       <h1>Meal Details Page</h1>
+//       <h3>{params.mealSlug}</h3>
+//       {/* <h3>{meal.title}</h3> */}
+//     </main>
+//   );
+// }
+
+// export default MealDetailsPage;
+
+function BlogPostPage({ params }) {
   return (
     <main>
       <h1>Meal Details Page</h1>
       <h3>{params.mealSlug}</h3>
-      {/* <h3>{meal.title}</h3> */}
     </main>
   );
 }
 
-export default MealDetailsPage;
+export default BlogPostPage;
