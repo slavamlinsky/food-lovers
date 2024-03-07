@@ -4,15 +4,16 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 function MealDetailsPage({ params }) {
-  const meal = getMeal(params.slug);
+  // const meal = getMeal(params.slug);
 
-  if (!meal) {
-    notFound();
-  }
-  meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
+  // if (!meal) {
+  //   notFound();
+  // }
+  // meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
   return (
     <>
-      <header className={styles.header}>
+      <h3>{params.slug}</h3>
+      {/* <header className={styles.header}>
         <div className={styles.image}>
           <Image src={meal.image} alt={meal.title} fill sizes="20em" />
         </div>
@@ -26,7 +27,7 @@ function MealDetailsPage({ params }) {
       </header>
       <main>
         <p className={styles.instructions} dangerouslySetInnerHTML={{ __html: meal.instructions }}></p>
-      </main>
+      </main> */}
     </>
   );
 }
