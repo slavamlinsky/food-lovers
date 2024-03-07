@@ -37,12 +37,12 @@ import { getMeal } from "@/lib/meals";
 // export default MealDetailsPage;
 
 function MealDetailsPage({ params }) {
-  const meal = getMeal(params.mealSlug);
+  // const meal = getMeal(params.mealSlug);
   return (
     <main>
       <h1>Meal Details Page</h1>
       <h3>{params.mealSlug}</h3>
-      <h3>{meal.title}</h3>
+      {/* <h3>{meal.title}</h3> */}
     </main>
   );
 }
