@@ -13,7 +13,7 @@ function ImagePicker({ label, name }) {
   function handleImageChange(event) {
     const file = event.target.files[0];
     // console.log(event.target)
-    console.log(file.name);
+    // console.log(file.name);
 
     if (!file) {
       setPickedImage(null);
