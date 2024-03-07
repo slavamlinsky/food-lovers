@@ -4,12 +4,13 @@ import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 
 function MealDetailsPage({ params }) {
-  const meal = getMeal(params.mealSlug);
+  const meal = getMeal("chicken-nuggets");
 
   if (!meal) {
     notFound();
   }
   meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
+
   return (
     <>
       <h3>{params.mealSlug}</h3>
