@@ -34,13 +34,13 @@
 
 // export default MealDetailsPage;
 
-function BlogPostPage({ params }) {
+function MealDetailsPage({ params }) {
   return (
     <main>
-      <h1>Blog Post Page</h1>
-      <h3>{params.slug}</h3>
+      <h1>Meal Details Page</h1>
+      <h3>{params.mealSlug}</h3>
     </main>
   );
 }
 
-export default BlogPostPage;
+export default MealDetailsPage;
