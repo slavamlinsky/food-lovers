@@ -6,8 +6,8 @@ async function BlogPage() {
 
   return (
     <main>
-      <h1>The Blog</h1>
-      <h2>{meal.title}</h2>
+      <h1>The Blog New</h1>
+      <h2>{meal.creator}</h2>
       <p>
         <Link href="/blog/post-1">Post 1</Link>
       </p>
