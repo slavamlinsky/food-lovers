@@ -1,5 +1,5 @@
 // import { getMeal } from "@/lib/meals";
-import { getMeals } from "@/lib/meals";
+import { getMeal, getMeals } from "@/lib/meals";
 import styles from "./page.module.css";
 // import Image from "next/image";
 // import { notFound } from "next/navigation";
@@ -50,9 +50,15 @@ import styles from "./page.module.css";
 
 // export default MealDetailsPage;
 
-async function BlogPostPage({ params }) {
-  const meals = await getMeals();
-  console.log(meals);
+async function MealDetails(name) {
+  const meal = await getMeal(name);
+
+  return meal;
+}
+
+async function MealDetailPage({ params }) {
+  // const meals = await getMeals();
+  // console.log(meals);
   return (
     <>
       {/* <header className={styles.header}>
@@ -72,10 +78,11 @@ async function BlogPostPage({ params }) {
         <div className={styles.headerText}>
           <h3>{params.mealSlug}</h3>
           <h1>{params.mealSlug}</h1>
+          <MealDetails meal={params.mealSlug} />
         </div>
       </main>
     </>
   );
 }
 
-export default BlogPostPage;
+export default MealDetailPage;
