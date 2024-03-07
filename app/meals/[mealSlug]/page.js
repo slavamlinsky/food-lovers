@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 
 async function MealDetailsPage({ params }) {
+  const { mealSlug } = params;
+
   const meal = await getMeal("chicken-nuggets");
 
   if (!meal) {
-    notFound();
+    return notFound();
   }
   meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
 
