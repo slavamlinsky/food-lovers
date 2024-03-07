@@ -3,8 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 
-function MealDetailsPage({ params }) {
-  const meal = getMeal("chicken-nuggets");
+async function MealDetailsPage({ params }) {
+  const meal = await getMeal("chicken-nuggets");
 
   if (!meal) {
     notFound();

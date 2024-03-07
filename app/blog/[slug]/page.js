@@ -1,7 +1,7 @@
 import { getMeal } from "@/lib/meals";
 
-function BlogPostPage({ params }) {
-  const meal = getMeal("chicken-nuggets");
+async function BlogPostPage({ params }) {
+  const meal = await getMeal("chicken-nuggets");
 
   // console.log("Meal");
   // console.log(meal);
@@ -10,7 +10,7 @@ function BlogPostPage({ params }) {
     <main>
       <h1>Blog Post Page</h1>
       <h3>{params.slug}</h3>
-      <h3>{meal.title}</h3>
+      <h3>{meal.creator}</h3>
     </main>
   );
 }
