@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import MealsGrid from "@/components/Meals/MealsGrid";
-import { getAllMeals } from "@/lib/meals";
+import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 async function Meals() {
-  const meals = await getAllMeals();
+  const meals = await getMeals();
 
   return <MealsGrid meals={meals} />;
 }

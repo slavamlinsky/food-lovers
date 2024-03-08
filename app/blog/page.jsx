@@ -1,8 +1,8 @@
-import { getOneMeal } from "@/lib/meals";
+import { getMeal } from "@/lib/meals";
 import Link from "next/link";
 
 async function BlogPage({ params }) {
-  const meal = await getOneMeal(params.slug);
+  const meal = await getMeal(params.slug);
 
   return (
     <main>
@@ -20,9 +20,6 @@ async function BlogPage({ params }) {
       <p>
         <Link href="/blog/post-4">Post 4</Link>
       </p>
-      {process.env.MONGODB_USERNAME}
-      {process.env.MONGODB_PASSWORD}
-      {process.env.MONGODB_CLUSTERNAME}
     </main>
   );
 }

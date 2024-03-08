@@ -1,12 +1,12 @@
-import { getOneMeal, getAllMeals } from "@/lib/meals";
+import { getMeal, getMeals } from "@/lib/meals";
 
 async function BlogPostPage({ params }) {
   const { slug } = params;
 
-  const oneMeal = await getOneMeal(slug);
+  const oneMeal = await getMeal(slug);
   // console.log("Meal", meal);
 
-  const meals = await getAllMeals();
+  const meals = await getMeals();
   // meals.map(meal => console.log("Meals", meal) );
 
   return (
