@@ -1,9 +1,13 @@
+import { getOneMeal } from "@/lib/meals";
 import Link from "next/link";
 
-function BlogPage() {
+async function BlogPage() {
+  const meal = await getOneMeal(slug);
+
   return (
     <main>
       <h1>The Blog</h1>
+      {meal && <h2>{meal.title}</h2>}
       <p>
         <Link href="/blog/post-1">Post 1</Link>
       </p>
