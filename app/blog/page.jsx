@@ -1,8 +1,8 @@
 import { getOneMeal } from "@/lib/meals";
 import Link from "next/link";
 
-async function BlogPage() {
-  const meal = await getOneMeal(slug);
+async function BlogPage({ params }) {
+  const meal = await getOneMeal(params.slug);
 
   return (
     <main>
