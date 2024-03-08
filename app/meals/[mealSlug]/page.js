@@ -1,13 +1,12 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getMeal, getOneMeal } from "@/lib/meals";
+import { getMeal } from "@/lib/meals";
 
 async function MealDetailsPage({ params }) {
   const { mealSlug } = params;
 
-  // const meal = await getMeal(mealSlug);
-  const meal = await getOneMeal(mealSlug);
+  const meal = await getMeal(mealSlug);
 
   if (!meal) {
     return notFound();
