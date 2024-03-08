@@ -4,7 +4,7 @@ import MealsGrid from "@/components/Meals/MealsGrid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
-export const revalidate = 60; // revalidate the data at most every hour
+export const revalidate = 60 * 15; // revalidate the data at every 15 minutes
 
 export const metadata = {
   title: "All Meals and Dishes",
