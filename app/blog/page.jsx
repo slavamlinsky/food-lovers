@@ -20,6 +20,9 @@ async function BlogPage({ params }) {
       <p>
         <Link href="/blog/post-4">Post 4</Link>
       </p>
+      {process.env.MONGODB_USERNAME}
+      {process.env.MONGODB_PASSWORD}
+      {process.env.MONGODB_CLUSTERNAME}
     </main>
   );
 }
