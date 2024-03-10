@@ -3,14 +3,26 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getMeal } from "@/lib/meals";
 
+export async function generateMetadata({ params }) {
+  // console.log(params.mealSlug);
+  const meal = await getMeal(params.mealSlug);
+  // console.log(meal.title);
+
+  if (!meal) {
+    return notFound();
+  }
+
+  return {
+    title: meal.title + " from food lovers.",
+    description: meal.summary,
+  };
+}
+
 async function MealDetailsPage({ params }) {
   const { mealSlug } = params;
 
   const meal = await getMeal(mealSlug);
 
-  if (!meal) {
-    return notFound();
-  }
   meal.instructions = meal.instructions.replace(/\n/g, "<br/>");
 
   return (

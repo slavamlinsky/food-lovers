@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "This meal was not found.",
+  description: "We colud not find this fish in our menu. Please, try again.",
+};
+
 function NotFound() {
   return (
     <main className="not-found">

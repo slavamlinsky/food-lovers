@@ -4,11 +4,11 @@ import MealsGrid from "@/components/Meals/MealsGrid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
-export const revalidate = 60 * 15; // revalidate the data at every 15 minutes
+export const revalidate = 60 * 30; // revalidate the data at every 15 minutes
 
 export const metadata = {
-  title: "All Meals and Dishes",
-  description: "Browse the delicious meals, shared by our community.",
+  title: "All Meals and Dishes for Food Lovers.",
+  description: "Browse the delicious meals, shared by our vibrant community.",
 };
 
 async function Meals() {

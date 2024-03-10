@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Page was not found.",
+  description: "Unfortunately, we could not find the requested page or resource. Please, try again.",
+};
+
 function NotFound() {
   return (
     <main className="not-found">
